@@ -48,11 +48,12 @@
     border-radius: 20px;
     border: 0;
     height: 30px;
-    cursor: pointer;
+    
 }
 
 .form .btn-hover:hover {
     transform: scale(1.1);
+    cursor: pointer;
     transition: 0.2s;
 }
 
