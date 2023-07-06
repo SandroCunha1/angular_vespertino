@@ -24,6 +24,14 @@ export class TableImcComponent {
       return "https://freepngimg.com/thumb/sad_emoji/36900-6-sad-emoji-transparent-background-thumb.png"
     }
   }
+
+  public colorSex(): string{
+    if(this.pessoa.sexo == "m"){
+      return "blue"
+    }else{
+      return "pink"
+    }
+  }
   }
 
 
