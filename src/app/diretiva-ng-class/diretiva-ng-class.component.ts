@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./diretiva-ng-class.component.scss']
 })
 export class DiretivaNgClassComponent {
+  
+  public estilo: string = "padrao";
+  mensagem = {
+    citacao: "",
+    nome: ""
+  }
 
 }

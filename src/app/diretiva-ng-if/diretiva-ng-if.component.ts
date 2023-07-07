@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class DiretivaNgIfComponent {
 
+  pessoa= {
+    nome: "",
+    idade: null,
+    sexo: ""
+  }
 }

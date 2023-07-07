@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./diretiva-ng-for.component.scss']
 })
 export class DiretivaNgForComponent {
+  descricao: string = "";
+  url: string = "";
+  px!: number;
 
+  public listImg: any = [];
+
+  public addImg(){
+    this.listImg.push({descricao: this.descricao , url: this.url, px: this.px});
+  }
 }

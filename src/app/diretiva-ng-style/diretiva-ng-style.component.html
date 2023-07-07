@@ -1,1 +1,18 @@
-<p>diretiva-ng-style works!</p>
+<main class="container">
+    <form action="" class="form">
+        <legend>Box Shadow</legend>
+        <div class="square" 
+        [ngStyle]="{'box-shadow':''+x+'px '+y+'px '+blur+'px '+radius+'px rgba(107, 13, 13, 0.4)'}"></div>
+        <div class="btns" 
+        >
+            <button class="btn" (click)="minusY()">^</button>
+            <button class="btn" (click)="minusX()"><</button>
+            <button class="btn" (click)="plusX()">></button>
+            <button class="btn" (click)="plusY()">v</button>
+            <button class="btn" (click)="minusBlur()">- Blur</button>
+            <button class="btn" (click)="plusBlur()">+ Blur</button>
+            <button class="btn" (click)="minusRadio()">- Radius</button>
+            <button class="btn" (click)="plusRadio()">+ Radius</button>
+        </div>
+    </form>
+</main>

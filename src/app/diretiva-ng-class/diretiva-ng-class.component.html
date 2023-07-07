@@ -1,1 +1,23 @@
-<p>diretiva-ng-class works!</p>
+<main class="container">
+    <form class="form">
+        <legend>Citações</legend>
+        <label for="citacao">Citação</label>
+        <input type="text" id="citacao" name="citacao" [(ngModel)]="mensagem.citacao">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="mensagem.nome">
+
+        <label for="estilos">Estilo</label>
+        <select name="estilos" id="estilos" [(ngModel)]="estilo">
+            <option value="padrao">Padrão</option>
+            <option value="neon">Neon</option>
+            <option value="clean">Clean</option>
+        </select>
+        <div class="citacao" [ngStyle]="{'display': mensagem.citacao == '' && mensagem.nome == '' ? 'none' : 'flex'}"
+            [ngClass]="estilo">
+
+            <p [ngStyle]="{'display': mensagem.citacao == ''? 'none': ''}">"{{mensagem.citacao}}"</p>
+            <p [ngStyle]="{'display': mensagem.nome == ''? 'none': ''}">- {{mensagem.nome}}</p>
+
+        </div>
+    </form>
+</main>

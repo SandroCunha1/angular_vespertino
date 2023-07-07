@@ -1,1 +1,24 @@
-<p>diretiva-ng-if works!</p>
+<main class="container">
+    <form action="" class="form">
+        <legend>Monta Personagem</legend>
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" [(ngModel)]="pessoa.nome">
+        <label for="idade">Idade</label>
+        <input type="text" id="idade" name="idade" [(ngModel)]="pessoa.idade">
+        <label for="estilos">Sexo</label>
+        <select name="estilos" id="estilos" [(ngModel)]="pessoa.sexo">
+            <option value="h">Homem</option>
+            <option value="m">Mulher</option>
+            <option value="heli">Helicóptero</option>
+        </select>
+    </form>
+    <div class="personagem" *ngIf="pessoa.sexo != ''">
+        <img *ngIf="pessoa.sexo == 'h'" src="https://static.vecteezy.com/system/resources/previews/010/871/007/non_2x/3d-character-illustration-casual-man-pointing-at-something-interesting-right-choice-pose-free-png.png" alt="" width="400px">
+        <img *ngIf="pessoa.sexo == 'm'" src="https://static.vecteezy.com/system/resources/previews/011/006/195/non_2x/3d-character-illustration-woman-showing-phone-screen-with-winning-gesture-getting-good-news-free-png.png" alt="" width="400px">
+        <img *ngIf="pessoa.sexo == 'heli'" src="https://i.pinimg.com/originals/54/46/50/544650e2a1e4369e53ea08dd221a9a11.png" alt="" width="400px">
+        <div class="status">
+        <p><b>Nome:</b> {{pessoa.nome}}</p>
+        <p><b>Idade:</b> {{pessoa.idade}}</p>
+        </div>
+    </div>
+</main>

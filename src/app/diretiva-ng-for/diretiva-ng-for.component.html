@@ -1,1 +1,26 @@
-<p>diretiva-ng-for works!</p>
+<main class="container">
+    <div>
+        <form action="" class="form">
+            <legend>Imagens</legend>
+            <label for="url">Url</label>
+            <input type="text" id="url" name="url" [(ngModel)]="url">
+            <label for="desc">Descrição</label>
+            <input type="text" id="desc" name="desc" [(ngModel)]="descricao">
+            <label for="px">Largura em px</label>
+            <input type="number" id="px" name="px" [(ngModel)]="px">
+            <p *ngIf="(px > 300)">Px máximo permitido de 300</p>
+            <button 
+            type="submit" 
+            class="btn-submit" 
+            (click)="addImg()" 
+            *ngIf="!(px > 300 || url == '' || descricao == '' || px == null)"
+            >
+             Salvar
+            </button>
+        </form>
+        <div class="img" *ngFor="let img of listImg">
+            <img src="{{img.url}}" alt="{{img.descricao}}" width="{{img.px}}">
+            <p>{{img.descricao}}</p>
+        </div>
+    </div>
+</main>

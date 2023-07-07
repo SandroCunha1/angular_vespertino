@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    min-width: 300px;
+    max-width: 500px;
+    margin-bottom: 30px;
+    color: white;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: rgba(100, 97, 97, 0.479);
+    box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.479);
+}
+.citacao{
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    min-width: 200px;
+    min-height: 100px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+
+.padrao{
+    font-size: larger;
+    color: rgb(252, 252, 252);
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+    background-color: rgb(66, 63, 63);
+    border-radius: 20px;
+    border: 1px solid white;
+}
+
+.neon{
+    font-size: larger;
+    color: rgb(230, 13, 230);
+    text-shadow: 0px 0px 4px  #ff00c8;
+    box-shadow: 0px 0px 10px 1px #ff00c8;
+    background-color: rgb(66, 63, 63);
+    border-radius: 20px;
+    border: 1px solid #ff00c899;
+}
+
+.clean{
+    font-size: larger;
+    color: rgb(0, 0, 0);
+    background-color: #FFF0D2;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+}
