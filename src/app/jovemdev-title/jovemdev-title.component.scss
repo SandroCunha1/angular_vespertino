@@ -1,11 +1,9 @@
 header{
-    background-color: rgba(0, 0, 0, 0.169);
     padding: 50px;
     font-weight: bold;
     font-size: 30px;
     font-family: 'Times New Roman', Times, serif;
     display: flex;
-    justify-content: space-between;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     align-items: center;
@@ -13,4 +11,7 @@ header{
 header h1{
     font-size: 30px;
     padding-right: 150px;
+    justify-self: center;
+    align-self: center;
+    margin-left: 40px;
 }

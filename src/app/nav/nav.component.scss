@@ -21,6 +21,7 @@ body {
     z-index: 1;
     top: 50px;
     right: 50px;
+    transition: 0.3s;
     cursor: pointer;
 }
 
@@ -72,14 +73,22 @@ input:checked~label .hamburguer:after {
     bottom: 0;
 }
 
+input:checked~label .menu{
+    right: 220px;
+    transition: 0.5s;
+}
+
 .links {
     position: fixed;
     z-index: 0;
     right: -250px;
     width: 250px;
     height: 100vh;
+    padding-top: 100px;
     background-color: rgba(0, 0, 0, 0.169);
     transition: 0.5s;
+    top: 0;
+    overflow: auto;
 }
 
 input:checked~.links {
