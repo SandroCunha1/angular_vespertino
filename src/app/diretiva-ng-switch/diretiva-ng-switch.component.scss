@@ -1,0 +1,33 @@
+.radio-group input{
+    display: none;
+}
+.radio-group label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-left: 10px;
+    border-radius: 100px;
+    background-color: rgba(0, 0, 0, 0.591);
+    cursor: pointer;
+}
+
+.radio-group label:hover{
+    background-color: rgba(0, 0, 0, 0.14);
+    transition: 0.5s;
+}
+input[type="radio"]:checked+label{
+    background-color: rgba(255, 0, 0, 0.322);
+    border: 1px solid rgba(37, 35, 35, 0.579);
+}
+
+.mood div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+

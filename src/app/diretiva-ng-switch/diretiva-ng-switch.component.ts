@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./diretiva-ng-switch.component.scss']
 })
 export class DiretivaNgSwitchComponent {
-
+  public user:number = -1 ;
 }

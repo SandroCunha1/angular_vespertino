@@ -1,1 +1,33 @@
-<p>diretiva-ng-switch works!</p>
+<main class="container">
+    <form action="" class="form">
+        <legend><p>De 1 á 5:</p> <p>Como você está se sentindo hoje?</p></legend>
+        <div class="radio-group">
+            <input type="radio" name="mood" id="1" value="0" [(ngModel)]="user">
+            <label for="1">1</label>
+            <input type="radio" name="mood" id="2" value="1" [(ngModel)]="user">
+            <label for="2">2</label>
+            <input type="radio" name="mood" id="3" value="2" [(ngModel)]="user">
+            <label for="3">3</label>
+            <input type="radio" name="mood" id="4" value="3" [(ngModel)]="user">
+            <label for="4">4</label>
+            <input type="radio" name="mood" id="5" value="4" [(ngModel)]="user">
+            <label for="5">5</label>
+        </div>
+
+
+        <div [ngSwitch]="user" class="mood">
+            <div *ngSwitchCase="0"><img src="https://freepngimg.com/thumb/sad_emoji/36807-4-sad-emoji-clipart.png" alt=""
+                    width="200px"> MUITO TRISTE </div>
+            <div *ngSwitchCase="1"><img
+                    src="https://freepngimg.com/thumb/sad_emoji/36900-6-sad-emoji-transparent-background-thumb.png"
+                    alt="" width="200px">TRISTE</div>
+            <div *ngSwitchCase="2"><img
+                    src="https://emojiisland.com/cdn/shop/products/Neutral_Emoji_icon_9f1cc93a-f984-4b6c-896e-d24a643e4c28_large.png?v=1571606091"
+                    alt="" width="200px"> Neutro</div>
+            <div *ngSwitchCase="3"><img src="https://www.pngmart.com/files/15/Happy-Emoji-PNG.png" alt=""
+                    width="200px">FELIZ</div>
+            <div *ngSwitchCase="4"><img src="https://uploads-ssl.webflow.com/646218c67da47160c64a84d5/646344f4becdbd5e3e1e77f7_43.png" alt=""
+                    width="200px">MUITO FELIZ</div>
+        </div>
+    </form>
+</main>
