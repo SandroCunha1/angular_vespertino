@@ -1,0 +1,72 @@
+.microondas{
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+.display{
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    border: 0px;
+    background-color: rgb(63, 60, 60);
+    color: rgb(241, 88, 33);
+    text-align: center;
+    font-size: 30px;
+    font-family: monospace;
+
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.buttons-2{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buttons-2 button{
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttons-2 .confirma{
+    background-color: rgba(38, 163, 38, 0.699);
+    &:hover{
+        background-color: rgba(36, 143, 36, 0.397); 
+        color: white;
+    }
+}
+
+.buttons-2 .cancela{
+    background-color: rgba(177, 25, 25, 0.623);
+    &:hover{
+        background-color: rgba(66, 15, 15, 0.63);
+        color: white;
+    }
+}
+
+.buttons button{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    &:hover{
+        background-color: rgba(209, 203, 203, 0.76);
+    }
+}
+
+
+
+.buttons div{
+    display: flex;
+    gap: 10px;
+}
+

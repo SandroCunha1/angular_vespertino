@@ -1,1 +1,33 @@
-<p>microondas works!</p>
+<main class="container">
+    <div class="microondas">
+        <div class="display">
+            {{ min | number:'2.0'}}:{{ sec | number:'2.0'}}
+        </div>
+        <div class="buttons-2">
+            <button (click)="add30Seconds()">+30 Segundos</button>
+            <button (click)="add01Minute()">+1 Minuto</button>
+        </div>
+        <div class="buttons">
+            <div>
+                <button (click)="transform(1)" [disabled]="state">1</button>
+                <button (click)="transform(2)" [disabled]="state">2</button>
+                <button (click)="transform(3)" [disabled]="state">3</button>
+            </div>
+            <div>
+                <button (click)="transform(4)" [disabled]="state">4</button>
+                <button (click)="transform(5)" [disabled]="state">5</button>
+                <button (click)="transform(6)" [disabled]="state">6</button>
+            </div>
+            <div>
+                <button (click)="transform(7)" [disabled]="state">7</button>
+                <button (click)="transform(8)" [disabled]="state">8</button>
+                <button (click)="transform(9)" [disabled]="state">9</button>
+            </div>
+            <button (click)="transform(0)" [disabled]="state">0</button>
+        </div>
+        <div class="buttons-2">
+            <button class="cancela" (click)="turnOff()">Cancela</button>
+            <button class="confirma" (click)="turnOn()" [disabled]="state">Ligar</button>
+        </div>
+    </div>
+</main>
