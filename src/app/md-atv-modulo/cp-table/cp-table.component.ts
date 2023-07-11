@@ -7,12 +7,12 @@ import { ServiceMedService } from '../services/service-med.service';
   styleUrls: ['./cp-table.component.scss']
 })
 export class CpTableComponent {
-  public lista: Array<{nome: string, preco:number}> = [];
+  public lista: Array<{ nome: string, preco: number }> = [];
 
-  constructor(private service: ServiceMedService){}
-  
-  carregaMedicamento(medicamento:any){
+  constructor(private service: ServiceMedService) { }
 
+  carregaMedicamento(medicamento: any) {
+    this.service.carregaMed(medicamento)
   }
   ngOnInit(): void {
     this.lista = this.service.getLista();

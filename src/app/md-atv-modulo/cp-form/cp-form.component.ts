@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ServiceMedService } from '../services/service-med.service';
 
 @Component({
@@ -7,16 +7,21 @@ import { ServiceMedService } from '../services/service-med.service';
   styleUrls: ['./cp-form.component.scss']
 })
 
-export class CpFormComponent {
-
-  constructor(private service: ServiceMedService){}
+export class CpFormComponent implements OnInit {
 
   public listaMed = {
     nome: "",
     preco: null
   }
 
-  public addItem(valor: any){
+  constructor(private service: ServiceMedService) { }
+
+  ngOnInit(): void {
+    this.service.emitEvent.subscribe({
+      next: (res: any) => this.listaMed = res
+    })
+  }
+  public addItem(valor: any) {
     let lista = {
       nome: valor.nome,
       preco: valor.preco
@@ -27,4 +32,5 @@ export class CpFormComponent {
     }
     return this.service.adiciona(lista)
   }
+
 }
