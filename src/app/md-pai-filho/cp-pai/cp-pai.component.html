@@ -1,0 +1,14 @@
+<main class="container">
+    <div>
+        <form action="" class="form">
+            <legend>Componente pai</legend>
+            <label for="marca">Marca</label>
+            <input type="text" name="marca" id="marca" [(ngModel)]="carro.marca">
+            <label for="ano">Ano</label>
+            <input type="number" name="ano" id="ano" [(ngModel)]="carro.ano">
+            <label for="cor">Cor</label>
+            <input type="color" name="cor" id="cor" [(ngModel)]="carro.cor">
+        </form>
+        <app-cp-filho [carroFilho]="carro"></app-cp-filho>
+    </div>
+</main>

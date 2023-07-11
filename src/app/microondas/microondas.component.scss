@@ -35,6 +35,9 @@
     height: 50px;
     border-radius: 5px;
     cursor: pointer;
+    &:hover{
+        background-color: rgba(209, 203, 203, 0.76);
+    }
 }
 
 .buttons-2 .confirma{

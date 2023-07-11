@@ -1,0 +1,9 @@
+<main class="container">
+    <div>
+        <div class="form">
+        <legend>Cp-Pai</legend>
+        <p>Número sorteado: {{numero}}</p>
+        </div>
+        <app-cp-filho (emite)="recebeNumero($event)"></app-cp-filho>
+    </div>
+</main>

@@ -9,6 +9,7 @@ export class MicroondasComponent {
   public state = false;
   public min: number = 0;
   public sec: number = 0;
+  public total: number = this.min * 60 + this.sec;
   public secLegacy: number = 0;
 
   transform(number: number): void {
@@ -30,7 +31,6 @@ export class MicroondasComponent {
       }
     }
 
-
     if (min.toString().length < 3) {
       this.min = min;
       this.sec = sec;
@@ -38,7 +38,11 @@ export class MicroondasComponent {
   }
 
   add30Seconds(){
-    this.sec += 30;
+    this.sec = this.sec + 30;
+    if(this.sec >= 60){
+      this.min += Math.floor(this.sec / 60);
+      this.sec %= 60;
+    }
     if(!this.state){
       this.state = true;
       this.turnOn();
@@ -52,17 +56,20 @@ export class MicroondasComponent {
       this.turnOn();
     }
   }
+
+  
   turnOn() {
     this.state = true;
     setInterval(() => {
-      if (this.state === true && this.sec > 0 || this.min > 0) {
+      if (this.state && this.sec > 0 || this.min > 0) {
         this.sec -= 1;
         if (this.sec === -1 && this.min > 0) {
           this.min -= 1;
           this.sec = 59;
         }
-        if (this.sec > 0 || this.min > 0) {
-          this.state == false;
+        if (this.sec <= 0 && this.min <= 0) {
+          this.state = false;
+          clearInterval;
         }
       }
     }, 1000);
@@ -72,6 +79,7 @@ export class MicroondasComponent {
   turnOff() {
     if (this.state) {
       this.state = false;
+      clearInterval;
     } else {
       this.sec = 0;
       this.min = 0;
