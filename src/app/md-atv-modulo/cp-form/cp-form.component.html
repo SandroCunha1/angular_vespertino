@@ -1,4 +1,4 @@
-<form action="">
+<form action="" #login>
     <legend>Cadastro de medicamentos:</legend>
     <div>
         <label for="nome">Nome: </label>
@@ -8,5 +8,5 @@
         <label for="valor">Valor: </label>
         <input type="number" name="valor" id="valor" [(ngModel)]="listaMed.preco">
     </div>
-    <button class="btn-submit btn-hover" (click)="addItem(listaMed)" [disabled]="listaMed.nome == '' || listaMed.preco == null">Submit</button>
+    <button class="btn-submit btn-hover" (click)="addItem(listaMed, login)" [disabled]="listaMed.nome == '' || listaMed.preco == null">Submit</button>
 </form>

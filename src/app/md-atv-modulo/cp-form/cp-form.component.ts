@@ -21,15 +21,13 @@ export class CpFormComponent implements OnInit {
       next: (res: any) => this.listaMed = res
     })
   }
-  public addItem(valor: any) {
+
+  public addItem(valor: any, form:any) {
     let lista = {
       nome: valor.nome,
       preco: valor.preco
     }
-    this.listaMed = {
-      nome: "",
-      preco: null
-    }
+    form.reset();
     return this.service.adiciona(lista)
   }
 

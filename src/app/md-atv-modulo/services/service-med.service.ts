@@ -27,11 +27,9 @@ export class ServiceMedService {
     this.medicamento.nome = medicamento.nome;
     this.medicamento.preco = medicamento.preco;
     this.emitEvent.emit(this.medicamento)
-    console.log(medicamento)
   }
 
   public adiciona(valor: any) {
     this.lista.push(valor);
-    this.emitEvent.emit(this.lista.length);
   }
 }
