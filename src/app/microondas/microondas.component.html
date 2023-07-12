@@ -27,7 +27,7 @@
         </div>
         <div class="buttons-2">
             <button class="cancela" (click)="turnOff()">Cancela</button>
-            <button class="confirma" (click)="turnOn()" [disabled]="state">Ligar</button>
+            <button class="confirma" (click)="turnOn()" [disabled]="state || min<=0 && sec<=0">Ligar</button>
         </div>
     </div>
 </main>
